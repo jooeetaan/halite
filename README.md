@@ -1,8 +1,7 @@
-# halite
-Halite Bot.
+**HALITE**
+
+Halite Bot programming project built to learn AI.
 
 Authors: Joseph Tan and Kelly Glebus
-
-Programming project done to learn AI.
 
 Website: https://halite.io
