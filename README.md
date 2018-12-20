@@ -8,6 +8,8 @@ Website: https://halite.io
 
 ## Instructions on Making Changes  
 
+###this section needs revising once I learn how VCS works.
+
 All changes should be made in "dev" branch before being pushed to master. (To verify things work first).
 
 To modify the dev branch, first clone the repo (this only needs to be done once):
@@ -42,8 +44,10 @@ Now switch to the master branch:
 
 `git checkout master`
 
-`git pull` -> optional. It will probably overwrite your changes to dev if someone else did so you probably shouldn't
+`git pull` -> probably don't do. It will probably overwrite your changes to dev if someone else did so you probably shouldn't
 
 Now merge and handle any merge conflicts
 
 `git merge dev`
+
+`git push`
