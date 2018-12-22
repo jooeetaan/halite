@@ -37,6 +37,7 @@ Make Changes
 
 Commit your changes to the **dev** branch.
 
+  `git add .` -> If you added a new file.
   `git commit -a -m "commit message here"` -> -a is to commit all files
 
 Push your changes to the dev branch
