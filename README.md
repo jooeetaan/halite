@@ -6,9 +6,17 @@ Authors: Joseph Tan and Kelly Glebus
 
 Website: https://halite.io
 
-## Instructions on Making Changes  
+## Instructions on changing the Bot
 
-### this section needs revising once I learn how VCS works.
+Make changes to MyBot.java
+
+Run run_game.bat
+
+Go to https://halite.io/watch-games#/replay-bot to watch the replay (upload HLT file)
+
+To push changes, compile HLT and MyBot/java into a zip and uplaod to halite site.
+
+## Instructions on Making Changes  
 
 All changes should be made in "dev" branch before being pushed to master. (To verify things work first).
 
@@ -17,7 +25,7 @@ I'm not using github desktop for windows (that may have been a better idea in re
 To modify the dev branch, first clone the repo (this only needs to be done once):
 
   `git clone git@github.com:jooeetaan/halite.git` -> this is for SSH keys.
-  
+
   `git clone https://github.com/jooeetaan/halite.git` -> this is for HTTPS.
 
 Navigate to the folder:
