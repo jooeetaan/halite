@@ -28,18 +28,46 @@ public class MyBot
       //for player in game.players
 
 
-
+    int counter = 0;
     for(;;) //infinite game loop
     //sends the game state to players and processes commands returns from players
     {
       game.updateFrame(); //gets new Frame
       ArrayList<Command> commandQueue = new ArrayList<>();
 
+      //if (me.halite > Constants.SHIP_COST && !gameMap.at(me.shipyard).isOccupied())
+      //{
+
+      //}
+      if (counter == 0)
+      {
+        commandQueue.add(me.shipyard.spawn());
+        counter++;
+        game.endTurn(commandQueue);
+        continue;
+      }
       for(Ship ship : me.ships.values())
       {
-        commandQueue.add(ship.stayStill());
-      }
 
+        if (counter == 1)
+        {
+          commandQueue.add(ship.move(Direction.NORTH));
+        }
+        else if (ship.isFull() == true)
+        {
+          commandQueue.add(ship.move(gameMap.naiveNavigate(ship, me.shipyard.position)));
+        }
+        else if(gameMap.at(ship.position).halite != 0 && gameMap.at(ship.position) != gameMap.at(me.shipyard))
+        {
+          commandQueue.add(ship.stayStill());
+        }
+        else if(ship.isFull() == false)
+        {
+          commandQueue.add(ship.move(Direction.NORTH));
+        }
+
+      }
+      counter++;
       //end turns with the command that need to be sent.
       game.endTurn(commandQueue);
     }
